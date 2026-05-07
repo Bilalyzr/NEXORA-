@@ -4,33 +4,28 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Navigation Background Change on Scroll
+    // 1. Navigation Shadow on Scroll
     const nav = document.querySelector('#main-nav');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            nav.style.background = 'rgba(5, 10, 24, 0.95)';
             nav.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
+            nav.style.background = 'rgba(15, 23, 42, 0.98)'; // Solidified fixed dark slate
         } else {
-            nav.style.background = 'rgba(10, 25, 47, 0.7)';
             nav.style.boxShadow = 'none';
+            nav.style.background = 'rgba(15, 23, 42, 0.95)'; // Original fixed dark slate
         }
     });
 
-    // 2. Mobile Menu Toggle (Simplified)
+    // 2. Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
     mobileBtn.addEventListener('click', () => {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        if (navLinks.style.display === 'flex') {
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = 'var(--nav-height)';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.background = 'var(--secondary)';
-            navLinks.style.padding = '2rem';
-            navLinks.style.gap = '20px';
-        }
+        navLinks.classList.toggle('active');
+        // Toggle icon if needed (optional)
+        const icon = mobileBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
     });
 
     // 3. Scroll Animations using Intersection Observer
