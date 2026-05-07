@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thozhirporul | SIPCOT Smart Industrial Monitoring System (SIMS) by NEXORA</title>
+    <meta name="description"
+        content="Thozhirporul is an AI-powered SIPCOT Smart Industrial Monitoring System (SIMS) by NEXORA, providing real-time analytics and centralized governance.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+    <canvas id="bg-animation"></canvas>
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="NEXORA.png" alt="NEXORA Logo" class="logo-img">
+            </div>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#proposal">SIMS Project</a>
+                <a href="#problem">Problem</a>
+                <a href="#solution">Solution</a>
+                <a href="#features">Features</a>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon moon-icon"></i>
+                    <i class="fas fa-sun sun-icon"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">SIPCOT Smart Industrial Monitoring System <span class="highlight">(SIMS)</span>
+                </h1>
+                <p class="hero-subtitle"><strong>NEXORA</strong> presents <strong>Thozhirporul</strong>: A centralized
+                    AI platform enabling seamless data collection and real-time tracking for industrial governance.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Contact Us</a>
+                    <a href="#dashboard" class="btn btn-outline">Explore Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Proposal Section -->
+    <section id="proposal" class="section dark-bg">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">The SIMS Project</h2>
+                <div class="section-underline"></div>
+                <p class="section-description">A centralized industrial governance proposal by Startup NEXORA.</p>
+            </div>
+            <div class="proposal-card" data-aos="fade-up">
+                <div class="proposal-icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <div class="proposal-text">
+                    <p><strong>NEXORA</strong> proposes <strong>Thozhirporul</strong>, the <strong>SIPCOT Smart
+                            Industrial Monitoring System (SIMS)</strong>. This centralized platform enables seamless
+                        data collection, real-time tracking, and advanced analytics. The system allows industries to
+                        submit operational data digitally while providing authorities with a unified dashboard for
+                        monitoring, compliance management, and reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">The Challenge</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card" data-aos="fade-right">
+                    <i class="fas fa-database problem-icon"></i>
+                    <h3>Fragmented Data</h3>
+                    <p>Industries rely on manual spreadsheets and emails, leading to data silos and reporting delays.
+                    </p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-file-signature problem-icon"></i>
+                    <h3>Manual Compliance</h3>
+                    <p>Compliance tracking is paper-based, making it difficult to verify and audit in real-time.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-left" data-aos-delay="200">
+                    <i class="fas fa-eye-slash problem-icon"></i>
+                    <h3>Lack of Transparency</h3>
+                    <p>Government officials struggle with centralized monitoring and data-driven decision-making.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="section dark-bg">
+        <div class="container">
+            <div class="solution-wrapper">
+                <div class="solution-content" data-aos="fade-right">
+                    <h2 class="section-title">The NEXORA's Solution</h2>
+                    <p>NEXORA provides a unified intelligent platform designed specifically for SIPCOT industrial
+                        ecosystems.</p>
+                    <ul class="solution-list">
+                        <li><i class="fas fa-check-circle"></i> Centralized Monitoring Platform</li>
+                        <li><i class="fas fa-check-circle"></i> AI-Powered Governance</li>
+                        <li><i class="fas fa-check-circle"></i> Real-Time Analytics Dashboards</li>
+                        <li><i class="fas fa-check-circle"></i> Automated Compliance Tracking</li>
+                    </ul>
+                </div>
+                <div class="solution-image" data-aos="fade-left">
+                    <img src="assets/ai_concept.png" alt="NEXORA Solution Concept">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Platform Features</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="features-tabs">
+                <div class="features-grid">
+                    <!-- Software Features -->
+                    <div class="feature-category" data-aos="fade-up">
+                        <h3 class="category-title"><i class="fas fa-laptop-code"></i> Software Ecosystem</h3>
+                        <div class="feature-item">
+                            <h4>Role-Based Access</h4>
+                            <p>Secure portals for Government, Admin, and Industry users.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>GIS Explorer</h4>
+                            <p>Visual map-based navigation of all industrial plots.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Unified Data</h4>
+                            <p>One-stop submission for all industrial compliance data.</p>
+                        </div>
+                    </div>
+                    <!-- AI Features -->
+                    <div class="feature-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="category-title"><i class="fas fa-robot"></i> Intelligence Layer</h3>
+                        <div class="feature-item">
+                            <h4>Dynamic Navigation</h4>
+                            <p>AI assistant that redirects you to any section via natural language.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Fraud Detection</h4>
+                            <p>AI-driven anomaly detection for industrial reporting.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Smart Reports</h4>
+                            <p>Automated generation of monthly compliance insights.</p>
+                        </div>
+                    </div>
+                    <!-- Future IoT -->
+                    <div class="feature-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="category-title"><i class="fas fa-microchip"></i> Future IoT Scope</h3>
+                        <div class="feature-item">
+                            <h4>Pollution Monitoring</h4>
+                            <p>Real-time sensor integration for air and water quality.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Energy Tracking</h4>
+                            <p>Smart meter integration for grid load optimization.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Predictive Analytics</h4>
+                            <p>Forecasting industrial growth and resource needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Dashboard Preview (Gallery) -->
+    <section id="dashboard" class="section dark-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Command Center Preview</h2>
+                <div class="section-underline"></div>
+                <p class="section-description">A visual deep-dive into the NEXORA ecosystem portals.
+                    <button id="launch-preview" class="btn btn-text">Launch Full Preview <i
+                            class="fas fa-external-link-alt"></i></button>
+                </p>
+            </div>
+
+            <div class="gallery-section" data-aos="fade-up">
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="0">
+                        <img src="assets/gallery/Admin Dashboard.png" alt="Admin Dashboard">
+                        <div class="item-overlay"><span>Admin Dashboard</span></div>
+                    </div>
+                    <div class="gallery-item" data-index="1">
+                        <img src="assets/gallery/Admin Parks explorer.png" alt="Admin Parks Explorer">
+                        <div class="item-overlay"><span>Parks Explorer</span></div>
+                    </div>
+                    <div class="gallery-item" data-index="2">
+                        <img src="assets/gallery/Admins Command Dashboard.png" alt="Admins Command Dashboard">
+                        <div class="item-overlay"><span>Command Dashboard</span></div>
+                    </div>
+                    <div class="gallery-item" data-index="3">
+                        <img src="assets/gallery/Industry Dashboard Wordspace.png" alt="Industry Dashboard Workspace">
+                        <div class="item-overlay"><span>Industry Workspace</span></div>
+                    </div>
+                    <div class="gallery-item" data-index="4">
+                        <img src="assets/gallery/Industry Unified Data Submission.png" alt="Industry Data Submission">
+                        <div class="item-overlay"><span>Data Submission</span></div>
+                    </div>
+                    <div class="gallery-item" data-index="5">
+                        <img src="assets/gallery/Prototype Landing page.png" alt="Prototype Platform">
+                        <div class="item-overlay"><span>Prototype Platform</span></div>
+                    </div>
+                </div>
+                <div class="gallery-cta">
+                    <button id="launch-preview" class="btn btn-primary"><i class="fas fa-expand"></i> Launch Preview
+                        Gallery</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="gallery-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Preview">
+            <h3 id="modal-title"></h3>
+        </div>
+        <button class="modal-nav prev" id="modal-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="modal-nav next" id="modal-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Workflow Section -->
+    <section id="workflow" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">System Workflow</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="workflow-steps">
+                <div class="step" data-aos="fade-up">
+                    <div class="step-num">01</div>
+                    <h4>Industry Submission</h4>
+                    <p>Digital reporting via secure portals.</p>
+                </div>
+                <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-num">02</div>
+                    <h4>Analytics Engine</h4>
+                    <p>Data processing and validation.</p>
+                </div>
+                <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-num">03</div>
+                    <h4>Compliance Check</h4>
+                    <p>Automated verification logic.</p>
+                </div>
+                <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-num">04</div>
+                    <h4>AI Insights</h4>
+                    <p>Smart decision support for officials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team & Mentor -->
+    <section id="team" class="section dark-bg">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Niral Thiruvila 3.0 Team</h2>
+                <div class="section-underline"></div>
+                <p class="section-description">Innovation for Industrial Excellence</p>
+            </div>
+            <div class="team-wrapper">
+                <div class="team-info" data-aos="fade-right">
+                    <p class="hackathon-tag">Hackathon Submission</p>
+                    <h3>Team: <span class="highlight">Byte Cube</span></h3>
+                    <div class="team-members">
+                        <p><strong>Members:</strong> Abhinaya V, Boojashree M, Mohammed Bilal A</p>
+                    </div>
+                    <p>Developing future-ready industrial monitoring solutions.</p>
+                </div>
+                <div class="mentor-box" data-aos="fade-left">
+                    <h4>Guided by</h4>
+                    <p class="mentor-name">Dr.J.Sujipriya,
+                        <br>
+                        Assistant Professor,
+                        <br>
+                        MCA
+                    </p>
+                    <p class="college-name">Sona College of Technology</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-box" data-aos="zoom-in">
+                <h2>Ready to Transform Industrial Monitoring?</h2>
+                <p>Join the future of SIPCOT industrial governance with NEXORA.</p>
+                <div class="contact-btns">
+                    <a href="#" class="btn btn-primary">Contact Us</a>
+                </div>
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i> <a
+                            href="mailto:althafbilal1968@gmail.com">althafbilal1968@gmail.com</a></p>
+                    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mohammed-bilal-a-5b5656254/"
+                            target="_blank">Mohammed Bilal A</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="NEXORA.png" alt="NEXORA Logo">
+                    </div>
+                    <p><strong>NEXORA</strong> presents <strong>Thozhirporul</strong>: The SIPCOT Smart Industrial
+                        Monitoring System (SIMS). Advancing industrial governance through AI.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#proposal">SIMS Project</a></li>
+                        <li><a href="#problem">Problem</a></li>
+                        <li><a href="#solution">Solution</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> althafbilal1968@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEXORA. All rights reserved. Developed for Niral Thiruvila 3.0.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal" style="display: none;">
+        <span class="close-modal">&times;</span>
+        <button id="modal-prev" class="modal-nav prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="modal-next" class="modal-nav next-btn"><i class="fas fa-chevron-right"></i></button>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Preview">
+            <h3 id="modal-title"></h3>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
