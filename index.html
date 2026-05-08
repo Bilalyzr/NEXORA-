@@ -10,9 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Styles -->
@@ -20,8 +18,24 @@
 </head>
 
 <body class="dark-mode">
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="NEXORA.png" alt="NEXORA">
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <canvas id="bg-animation"></canvas>
     <div class="noise-overlay"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
     <!-- Navigation -->
     <nav id="main-nav">
         <div class="nav-container">
@@ -73,30 +87,112 @@
                     </div>
                 </div>
                 <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
-                    <div class="visual-card">
-                        <div class="card-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                            <span class="card-title">Live SIMS Analytics</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="data-row">
-                                <div class="data-bar" style="--width: 70%"></div>
-                                <div class="data-val">87%</div>
+                    <div class="sipcot-monitor">
+                        <div class="monitor-header">
+                            <div class="monitor-title">
+                                <i class="fas fa-industry"></i>
+                                SIPCOT Live Monitor
                             </div>
-                            <div class="data-row">
-                                <div class="data-bar" style="--width: 45%"></div>
-                                <div class="data-val">45%</div>
-                            </div>
-                            <div class="data-row">
-                                <div class="data-bar" style="--width: 92%"></div>
-                                <div class="data-val">92%</div>
+                            <div class="monitor-status">
+                                <span class="status-dot"></span>
+                                Live
                             </div>
                         </div>
-                        <div class="card-footer">
-                            <div class="pulse-node"></div>
-                            <span>System Active</span>
+                        <div class="monitor-grid">
+                            <!-- Industrial Zone A -->
+                            <div class="industrial-zone">
+                                <div class="zone-header">
+                                    <span class="zone-name">Zone A - Textile</span>
+                                    <span class="zone-compliance compliant">98%</span>
+                                </div>
+                                <div class="zone-plots">
+                                    <div class="plot active" data-status="operational" data-tooltip="TexCorp Ltd. - 98% Compliant">
+                                        <div class="plot-icon"><i class="fas fa-building"></i></div>
+                                        <div class="plot-status"></div>
+                                    </div>
+                                    <div class="plot active" data-status="operational" data-tooltip="SpinWeave Inc. - 96% Compliant">
+                                        <div class="plot-icon"><i class="fas fa-warehouse"></i></div>
+                                        <div class="plot-status"></div>
+                                    </div>
+                                    <div class="plot warning" data-status="warning" data-tooltip="DyeMasters - Action Required">
+                                        <div class="plot-icon"><i class="fas fa-industry"></i></div>
+                                        <div class="plot-status"></div>
+                                    </div>
+                                    <div class="plot active" data-status="operational" data-tooltip="FabricFirst - 99% Compliant">
+                                        <div class="plot-icon"><i class="fas fa-building"></i></div>
+                                        <div class="plot-status"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Industrial Zone B -->
+                            <div class="industrial-zone">
+                                <div class="zone-header">
+                                    <span class="zone-name">Zone B - Chemical</span>
+                                    <span class="zone-compliance compliant">95%</span>
+                                </div>
+                                <div class="zone-plots">
+                                    <div class="plot active" data-status="operational" data-tooltip="ChemPro Industries - 97% Compliant">
+                                        <div class="plot-icon"><i class="fas fa-flask"></i></div>
+                                        <div class="plot-status"></div>
+                                    </div>
+                                    <div class="plot active" data-status="operational" data-tooltip="PolyTech Solutions - 95% Compliant">
+                                        <div class="plot-icon"><i class="fas fa-atom"></i></div>
+                                        <div class="plot-status"></div>
+                                    </div>
+                                    <div class="plot active" data-status="operational" data-tooltip="AgriChem Co. - 94% Compliant">
+                                        <div class="plot-icon"><i class="fas fa-building"></i></div>
+                                        <div class="plot-status"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Industrial Zone C -->
+                            <div class="industrial-zone">
+                                <div class="zone-header">
+                                    <span class="zone-name">Zone C - Engineering</span>
+                                    <span class="zone-compliance warning">87%</span>
+                                </div>
+                                <div class="zone-plots">
+                                    <div class="plot active" data-status="operational" data-tooltip="AutoParts Ltd. - 92% Compliant">
+                                        <div class="plot-icon"><i class="fas fa-cogs"></i></div>
+                                        <div class="plot-status"></div>
+                                    </div>
+                                    <div class="plot warning" data-status="warning" data-tooltip="SteelWorks - Pending Review">
+                                        <div class="plot-icon"><i class="fas fa-wrench"></i></div>
+                                        <div class="plot-status"></div>
+                                    </div>
+                                    <div class="plot active" data-status="operational" data-tooltip="HeavyMachines Inc. - 89% Compliant">
+                                        <div class="plot-icon"><i class="fas fa-industry"></i></div>
+                                        <div class="plot-status"></div>
+                                    </div>
+                                    <div class="plot active" data-status="operational" data-tooltip="TechFoundries - 91% Compliant">
+                                        <div class="plot-icon"><i class="fas fa-building"></i></div>
+                                        <div class="plot-status"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="monitor-footer">
+                            <div class="footer-stat">
+                                <i class="fas fa-chart-line"></i>
+                                <div class="stat-info">
+                                    <span class="stat-label">Active Industries</span>
+                                    <span class="stat-value">247</span>
+                                </div>
+                            </div>
+                            <div class="footer-stat">
+                                <i class="fas fa-check-circle"></i>
+                                <div class="stat-info">
+                                    <span class="stat-label">Compliance Rate</span>
+                                    <span class="stat-value">94%</span>
+                                </div>
+                            </div>
+                            <div class="footer-stat">
+                                <i class="fas fa-bell"></i>
+                                <div class="stat-info">
+                                    <span class="stat-label">Alerts</span>
+                                    <span class="stat-value alert">3</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="visual-glow"></div>
@@ -333,45 +429,6 @@
         </div>
     </section>
 
-    <!-- Team & Mentor -->
-    <section id="team" class="section dark-bg">
-        <div class="container">
-            <div class="section-frame">
-                <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">Niral Thiruvila 3.0 Team</h2>
-                    <div class="section-underline"></div>
-                    <p class="section-description">Innovation for Industrial Excellence</p>
-                </div>
-                <div class="team-wrapper">
-                    <div class="team-info" data-aos="fade-right">
-                        <p class="hackathon-tag">Hackathon Submission</p>
-                        <h3>Team: <span class="highlight">Byte Cube</span></h3>
-                        <div class="team-members">
-                            <p><strong>Members:</strong>
-                                <br>
-                                Abhinaya V
-                                <br>
-                                Boojashree M
-                                <br>
-                                Mohammed Bilal A
-                            </p>
-                        </div>
-                        <p>Developing future-ready industrial monitoring solutions.</p>
-                    </div>
-                    <div class="mentor-box" data-aos="fade-left">
-                        <h4>Guided by</h4>
-                        <p class="mentor-name">Dr.J.Sujipriya,
-                            <br>
-                            Assistant Professor,
-                            <br>
-                            MCA
-                        </p>
-                        <p class="college-name">Sona College of Technology</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
